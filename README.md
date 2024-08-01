@@ -1,6 +1,4 @@
-Here's the markdown for your README file:
 
-```markdown
 # A-Peak Task project
 
 This project utilizes ShadCN UI and Radix UI libraries, integrating accessibility features to ensure an inclusive user experience. Below are the key implementations and features:
@@ -15,7 +13,6 @@ This project utilizes ShadCN UI and Radix UI libraries, integrating accessibilit
 - To run Storybook, use the command:
   ```bash
   yarn storybook
-  ```
 
 ### Adaptive and Type-Safe Components
 - All components are adaptive, ensuring they work seamlessly across different devices and screen sizes.
