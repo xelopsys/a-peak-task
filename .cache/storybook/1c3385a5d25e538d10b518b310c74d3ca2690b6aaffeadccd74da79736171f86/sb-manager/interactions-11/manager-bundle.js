@@ -1,0 +1,1 @@
+import '/Users/xelopsys/Desktop/Projects/a-peak-test/node_modules/@storybook/addon-interactions/dist/manager.js';

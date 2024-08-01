@@ -1,20 +1,232 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
-const config: Config = {
+const config = {
+  darkMode: ['class'],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      maxWidth: {
+        modal: 'var(--modal-width)',
+      },
+      width: {
+        modal: 'calc(100% - var(--spacing-4xl))',
+        screen: 'var(--screen-width)',
+        50: 'var(--screen-50w)',
+        75: 'var(--screen-75w)',
+      },
+      height: {
+        dropdown: 'var(--dropdown-height)',
+        screen: 'var(--screen-height)',
+        50: 'var(--screen-50h)',
+        75: 'var(--screen-75h)',
+      },
+      minHeight: {
+        screen: 'var(--screen-height)',
+      },
+      maxHeight: {
+        488: '488px',
+        dropdown: 'var(--dropdown-height)',
+        screen: 'var(--screen-height)',
+      },
+      fontSize: {
+        xs: 'var(--text-xs)',
+        sm: 'var(--text-sm)',
+        md: 'var(--text-md)',
+        lg: 'var(--text-lg)',
+        xl: 'var(--text-xl)',
+        'display-xs': 'var(--display-xs)',
+        'display-sm': 'var(--display-sm)',
+        'display-md': 'var(--display-md)',
+        'display-lg': 'var(--display-lg)',
+        'display-xl': 'var(--display-xl)',
+        'display-2xl': 'var(--display-2xl)',
+      },
+      lineHeight: {
+        xs: 'var(--leading-xs)',
+        sm: 'var(--leading-sm)',
+        md: 'var(--leading-md)',
+        lg: 'var(--leading-lg)',
+        xl: 'var(--leading-xl)',
+        'display-xs': 'var(--leading-d-xs)',
+        'display-sm': 'var(--leading-d-sm)',
+        'display-md': 'var(--leading-d-md)',
+        'display-lg': 'var(--leading-d-lg)',
+        'display-xl': 'var(--leading-d-xl)',
+        'display-2xl': 'var(--leading-d-2xl)',
+      },
+      letterSpacing: {
+        display: 'var(--tracking-d)',
+      },
+      borderColor: {
+        DEFAULT: 'var(--gray-300)',
+        primary: 'var(--gray-300)',
+        error: 'var(--error-500)',
+        brand: 'var(--brand-500)',
+        subtle: 'var(--gray-200)',
+        disabled: 'var(--gray-200)',
+        secondary: 'var(--gray-200)',
+      },
+      textColor: {
+        primary: 'var(--gray-900)',
+        disabled: 'var(--gray-400)',
+        placeholder: 'var(--gray-500)',
+        foreground: 'var(--foreground)',
+        tertiary: 'var(--gray-600)',
+        quaternary: 'var(--gray-500)',
+        secondary: 'var(--gray-700)',
+        brand: {
+          DEFAULT: 'var(--brand-500)',
+          tertiary: 'var(--brand-600)',
+        },
+        error: {
+          primary: 'var(--error-600)',
+        },
+        warning: {
+          primary: 'var(--warning-600)',
+        },
+        fg: {
+          quinary: 'var(--gray-400)',
+        },
+      },
+      backgroundColor: {
+        background: 'var(--background)',
+        disabled: 'var(--gray-100)',
+        quaternary: 'var(--gray-200)',
+        brand: {
+          DEFAULT: 'var(--brand-600)',
+          hover: 'var(--brand-700)',
+        },
+        secondary: {
+          DEFAULT: 'var(--gray-50)',
+          hover: 'var(--gray-100)',
+        },
+      },
+      stroke: {
+        secondary: 'var(--gray-700)',
+        disabled: 'var(--gray-400)',
+        quinary: 'var(--gray-400)',
+        brand: 'var(--brand-500)',
+      },
+      ringColor: {
+        brand: 'var(--brand-500)',
+      },
+      outlineColor: {
+        brand: 'var(--brand-500)',
+      },
+      boxShadow: {
+        xs: 'var(--shadow-xs)',
+        sm: 'var(--shadow-sm)',
+        md: 'var(--shadow-md)',
+        lg: 'var(--shadow-lg)',
+        xl: 'var(--shadow-xl)',
+        '2xl': 'var(--shadow-2xl)',
+        '3xl': 'var(--shadow-3xl)',
+        inner: 'var(--shadow-inner)',
+        error: 'var(--shadow-error)',
+        'inner-focus': 'var(--shadow-inner-focus)',
+      },
+      colors: {
+        gray: {
+          25: 'var(--gray-25)',
+          50: 'var(--gray-50)',
+          100: 'var(--gray-100)',
+          200: 'var(--gray-200)',
+          300: 'var(--gray-300)',
+          400: 'var(--gray-400)',
+          500: 'var(--gray-500)',
+          600: 'var(--gray-600)',
+          700: 'var(--gray-700)',
+          800: 'var(--gray-800)',
+          900: 'var(--gray-900)',
+          950: 'var(--gray-950)',
+        },
+        brand: {
+          25: 'var(--brand-25)',
+          50: 'var(--brand-50)',
+          100: 'var(--brand-100)',
+          200: 'var(--brand-200)',
+          300: 'var(--brand-300)',
+          400: 'var(--brand-400)',
+          500: 'var(--brand-500)',
+          600: 'var(--brand-600)',
+          700: 'var(--brand-700)',
+          800: 'var(--brand-800)',
+          900: 'var(--brand-900)',
+          950: 'var(--brand-950)',
+        },
+        tertiary: 'var(--gray-100)',
+        overlay: 'var(--gray-800)',
+      },
+      borderRadius: {
+        '4xl': 'var(--radius-4xl)',
+        '3xl': 'var(--radius-3xl)',
+        '2xl': 'var(--radius-2xl)',
+        xl: 'var(--radius-xl)',
+        lg: 'var(--radius-lg)',
+        md: 'var(--radius-md)',
+        sm: 'var(--radius-sm)',
+        xs: 'var(--radius-xs)',
+        xxs: 'var(--radius-xxs)',
+      },
+      gap: {
+        '4xl': 'var(--spacing-4xl)',
+        '3xl': 'var(--spacing-3xl)',
+        '2xl': 'var(--spacing-2xl)',
+        xl: 'var(--spacing-xl)',
+        lg: 'var(--spacing-lg)',
+        md: 'var(--spacing-md)',
+        sm: 'var(--spacing-sm)',
+        xs: 'var(--spacing-xs)',
+        xxs: 'var(--spacing-xxs)',
+      },
+      padding: {
+        '4xl': 'var(--spacing-4xl)',
+        '3xl': 'var(--spacing-3xl)',
+        '2xl': 'var(--spacing-2xl)',
+        xl: 'var(--spacing-xl)',
+        lg: 'var(--spacing-lg)',
+        md: 'var(--spacing-md)',
+        sm: 'var(--spacing-sm)',
+        xs: 'var(--spacing-xs)',
+        xxs: 'var(--spacing-xxs)',
+      },
+      margin: {
+        '4xl': 'var(--spacing-4xl)',
+        '3xl': 'var(--spacing-3xl)',
+        '2xl': 'var(--spacing-2xl)',
+        xl: 'var(--spacing-xl)',
+        lg: 'var(--spacing-lg)',
+        md: 'var(--spacing-md)',
+        sm: 'var(--spacing-sm)',
+        xs: 'var(--spacing-xs)',
+        xxs: 'var(--spacing-xxs)',
+      },
+      spacing: {
+        22: '22px',
+        26: '26px',
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [require('tailwindcss-animate'), require('tailwind-scrollbar')],
+} satisfies Config
+
+export default config

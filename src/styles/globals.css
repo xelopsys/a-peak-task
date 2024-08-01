@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* sizes(height)*/
+    --screen-50h: 50dvh;
+    --screen-75h: 75dvh;
+    --screen-height: 100dvh;
+    --dropdown-height: 320px;
+
+    /* sizes(weight)*/
+    --screen-50w: 50dvw;
+    --screen-75w: 75dvw;
+    --screen-width: 100dvw;
+    --modal-width: 640px;
+
+    /* gray(light mode) colors */
+    --gray-25: #fcfcfd;
+    --gray-50: #f9fafb;
+    --gray-100: #f2f4f7;
+    --gray-200: #e4e7ec;
+    --gray-300: #d0d5dd;
+    --gray-400: #98a2b3;
+    --gray-500: #667085;
+    --gray-600: #475467;
+    --gray-700: #344054;
+    --gray-800: #182230;
+    --gray-900: #101828;
+    --gray-950: #0c111d;
+
+    /* brand colors */
+    --brand-25: #fcfaff;
+    --brand-50: #f9f5ff;
+    --brand-100: #f4ebff;
+    --brand-200: #e9d7fe;
+    --brand-300: #d6bbfb;
+    --brand-400: #b692f6;
+    --brand-500: #9e77ed;
+    --brand-600: #7f56d9;
+    --brand-700: #6941c6;
+    --brand-800: #53389e;
+    --brand-900: #42307d;
+    --brand-950: #2c1c5f;
+
+    /* error color */
+    --error-500: #f04438;
+    --error-600: #d92d20;
+
+    /* warning color */
+    --warning-600: #dc6803;
+
+    /* radius */
+    --radius-4xl: 24px;
+    --radius-3xl: 20px;
+    --radius-2xl: 16px;
+    --radius-xl: 12px;
+    --radius-lg: 10px;
+    --radius-md: 8px;
+    --radius-sm: 6px;
+    --radius-xs: 4px;
+    --radius-xxs: 2px;
+
+    /* spacing */
+    --spacing-xxs: 2px;
+    --spacing-xs: 4px;
+    --spacing-sm: 6px;
+    --spacing-md: 8px;
+    --spacing-lg: 12px;
+    --spacing-xl: 16px;
+    --spacing-2xl: 20px;
+    --spacing-3xl: 24px;
+    --spacing-4xl: 32px;
+
+    --background: #fff;
+    --foreground: var(--gray-900);
+    --primary: #fff;
+
+    /* text */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+
+    /* display */
+    --display-xs: 24px;
+    --display-sm: 30px;
+    --display-md: 36px;
+    --display-lg: 48px;
+    --display-xl: 60px;
+    --display-2xl: 72px;
+
+    /* line-height(text) */
+    --leading-xs: 18px;
+    --leading-sm: 20px;
+    --leading-md: 24px;
+    --leading-lg: 28px;
+    --leading-xl: 30px;
+
+    /* line-height(display) */
+    --leading-d-xs: 32px;
+    --leading-d-sm: 38px;
+    --leading-d-md: 44px;
+    --leading-d-lg: 60px;
+    --leading-d-xl: 72px;
+    --leading-d-2xl: 90px;
+
+    /* letter-spacing(display) */
+    --tracking-d: -2%;
+
+    /* shadows */
+    --shadow-xs: 0px 1px 2px 0px #1018280d;
+    --shadow-sm: 0px 1px 2px 0px #1018280f, 0px 1px 3px 0px #1018281a;
+    --shadow-md: 0px 2px 4px -2px #1018280f, 0px 4px 8px -2px #1018281a;
+    --shadow-lg: 0px 4px 6px -2px #10182808, 0px 12px 16px -4px #10182814;
+    --shadow-xl: 0px 8px 8px -4px #10182808, 0px 20px 24px -4px #10182814;
+    --shadow-2xl: 0px 24px 48px -12px #1018282e;
+    --shadow-3xl: 0px 32px 64px -12px #10182824;
+    --shadow-inner: 0px 0px 0px 1px var(--gray-300) inset, 0px 0px 0px 1px #fff;
+    --shadow-inner-focus: 0px 0px 0px 1px var(--brand-500) inset;
+    --shadow-error: 0px 0px 0px 1px var(--error-500) inset;
+  }
+
+  /* dark mode */
+  .dark {
+    /* gray(dark mode) colors */
+    --gray-25: #fafafa;
+    --gray-50: #f5f5f6;
+    --gray-100: #f0f1f1;
+    --gray-200: #ececed;
+    --gray-300: #cecfd2;
+    --gray-400: #94969c;
+    --gray-500: #85888e;
+    --gray-600: #61646c;
+    --gray-700: #333741;
+    --gray-800: #1f242f;
+    --gray-900: #161b26;
+    --gray-950: #0c111d;
+
+    --background: var(--gray-950);
+    --foreground: var(--gray-50);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .border-gray-shadow {
+    box-shadow: rgba(255, 255, 255, 0.12) 0px -0.7px 0px 0.1px inset;
+    box-shadow:
+      0px 1px 2px 0px #1018280d,
+      0px -2px 0px 0px #1018280d inset,
+      0px 0px 0px 1px #1018282e inset;
+  }
+  .border-primary-shadow {
+    border: 1px solid;
+    border-color: var(--brand-700);
+    box-shadow: rgba(255, 255, 255, 0.12) 0px 0.6px 0px 0.25px inset;
+  }
+
+  .popover-full {
+    width: var(--radix-popover-trigger-width);
+    max-height: var(--radix-popover-content-available-height);
+  }
+}
