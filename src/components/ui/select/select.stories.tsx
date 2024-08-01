@@ -56,10 +56,15 @@ const data = [
 const Component = (args: Story['args']) => {
   return (
     <Select {...args}>
-      <SelectTrigger className="w-[280px]">
+      <SelectTrigger className="w-60">
         <SelectValue placeholder="Select a timezone" />
       </SelectTrigger>
-      <SelectContent className="h-80">
+      <SelectContent
+        className="h-80"
+        align="center"
+        sideOffset={5}
+        side="bottom"
+      >
         <SelectGroup>
           <SelectLabel>Time zones</SelectLabel>
           {data.map((item) => (
