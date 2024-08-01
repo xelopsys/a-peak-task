@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here's the markdown for your README file:
+
+```markdown
+# A-Peak Task project
+
+This project utilizes ShadCN UI and Radix UI libraries, integrating accessibility features to ensure an inclusive user experience. Below are the key implementations and features:
+
+## Features
+
+### Accessibility
+- Integrated ShadCN UI and Radix UI libraries with built-in accessibility features.
+
+### Storybook
+- Implemented Storybook for component development and testing.
+- To run Storybook, use the command:
+  ```bash
+  yarn storybook
+  ```
+
+### Adaptive and Type-Safe Components
+- All components are adaptive, ensuring they work seamlessly across different devices and screen sizes.
+- Ensured all components are type-safe, maintaining high code quality.
+
+### Colors and Typography
+- Colors and typography are implemented based on the UI design from Figma.
+- [View the Figma design here](https://www.figma.com/design/2Q6Xt6n3Ichzpe0G73BNzs/%E2%9D%96-Untitled-UI-%E2%80%93-PRO-VARIABLES-(v5.0)-0WkB4aP5KgSU-(Copy)?node-id=4059-417927&t=ekrnS2zdtCGgj3Dn-4)
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, clone the repository and install the necessary dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/xelopsys/a-peak-task
+cd a-peak-test
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To start the development server, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn dev
+```
 
-## Learn More
+To build the project for production, use:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running Storybook
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run Storybook, use the following command:
 
-## Deploy on Vercel
+```bash
+yarn storybook
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We welcome contributions to improve the project. Please follow the standard GitHub flow for contributions:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+
+Feel free to share any idea you've come up with!
